@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/resizable"
 import Sidebar from "@/components/Sidebar";
 import ProgressCard from "@/components/ProgressCard";
+import ActiveHours from "@/components/ActiveHours";
 
 export default function Main() {
     return (
@@ -18,7 +19,7 @@ export default function Main() {
                         <Sidebar />
                     </div>
                 </ResizablePanel>
-                <ResizableHandle />
+                {/*<ResizableHandle />*/}
                 <ResizablePanel defaultSize={82}>
                     <ResizablePanelGroup direction="vertical">
                         <ResizablePanel defaultSize={15}>
@@ -26,10 +27,10 @@ export default function Main() {
                                 <ProgressCard />
                             </div>
                         </ResizablePanel>
-                        <ResizableHandle />
+                        {/*<ResizableHandle />*/}
                         <ResizablePanel defaultSize={85}>
-                            <div className="flex items-center justify-center p-6">
-
+                            <div className="flex items-center justify-items-start p-6">
+                                <ActiveHours />
                             </div>
                         </ResizablePanel>
                     </ResizablePanelGroup>
