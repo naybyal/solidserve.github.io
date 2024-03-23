@@ -12,7 +12,7 @@ import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Separator} from "@/components/ui/separator";
 import {Input} from "@/components/ui/input";
-
+import Link from 'next/link'
 export default function Sidebar() {
     return (
         <div className='grid grid-cols-1 justify-evenly '>
@@ -51,29 +51,43 @@ export default function Sidebar() {
                         </Dialog>
                     </div>
                     <div className='mt-3 m-1 grid content-stretch'>
-                        <Button>Home</Button>
+                        <Button>
+                            <Link href='/dashboard'>
+                                Home
+                            </Link>
+                        </Button>
                     </div>
 
                     <div className='m-1 grid content-stretch'>
-                        <Button className='bg-secondary text-white font-extralight border-10'>Training Kit</Button>
+                        <Button className='bg-secondary text-white font-extralight border-10'>
+                            <Link href='/training-kit'>
+                                Training Kit
+                            </Link>
+                        </Button>
                     </div>
 
                     <div className='m-1 grid content-stretch'>
-                        <Button className='bg-secondary text-white font-extralight border-10'>Inbox</Button>
+                        <Button className='bg-secondary text-white font-extralight border-10'>
+                            <Link href='/inbox'>
+                                Inbox
+                            </Link>
+                        </Button>
                     </div>
 
                     <div className='m-1 grid content-stretch'>
-                        <Button className='bg-secondary text-white font-extralight border-10'>Tokens</Button>
+                        <Button className='bg-secondary text-white font-extralight border-10'>
+                            <Link href='/tokens'>Tokens</Link>
+                        </Button>
                     </div>
 
                     <div className='m-1 grid content-stretch'>
-                        <Button className='bg-secondary text-white font-extralight border-10'>Customers</Button>
+                        <Button className='bg-secondary text-white font-extralight border-10'><Link href='/customers'>Customers</Link></Button>
                     </div>
                 </div>
 
             </div>
             <div className='grid grid-cols-1 mt-2'>
-                <p className='justify-center align-middle font-extralight text-gray-300 text-sm'>Settings</p>
+                <p className='justify-center align-middle font-extralight text-gray-300 text-sm'><Link href='/services'>Services</Link></p>
                 <Separator/>
             </div>
             <div className='mt-2'>

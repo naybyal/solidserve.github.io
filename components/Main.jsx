@@ -1,13 +1,8 @@
-import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-} from "@/components/ui/resizable"
+import {ResizablePanel, ResizablePanelGroup} from "@/components/ui/resizable";
 import Sidebar from "@/components/Sidebar";
 import ProgressCard from "@/components/ProgressCard";
 import ActiveHours from "@/components/ActiveHours";
-
-export default function Main() {
+const Main = () => {
     return (
         <div className="flex flex-col h-svh">
             <ResizablePanelGroup
@@ -16,7 +11,7 @@ export default function Main() {
             >
                 <ResizablePanel defaultSize={18}>
                     <div className="flex items-center justify-center p-6">
-                        <Sidebar />
+                        <Sidebar/>
                     </div>
                 </ResizablePanel>
                 {/*<ResizableHandle />*/}
@@ -24,18 +19,20 @@ export default function Main() {
                     <ResizablePanelGroup direction="vertical">
                         <ResizablePanel defaultSize={15}>
                             <div className="flex h-full items-start justify-items-start">
-                                <ProgressCard />
+                                <ProgressCard/>
                             </div>
                         </ResizablePanel>
                         {/*<ResizableHandle />*/}
                         <ResizablePanel defaultSize={85}>
                             <div className="flex items-center justify-items-start p-6">
-                                <ActiveHours />
+                                <ActiveHours/>
                             </div>
                         </ResizablePanel>
                     </ResizablePanelGroup>
                 </ResizablePanel>
             </ResizablePanelGroup>
         </div>
-    )
+    );
 }
+
+export default Main;
